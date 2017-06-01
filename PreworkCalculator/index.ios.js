@@ -18,14 +18,6 @@ import Calculator from "./apps/calculator";
 import Setting from "./apps/Settings";
 
 
-// export default class PreworkCalculator extends Component {
-//     render() {
-//         return (
-//             <Calculator />
-//         );
-//     }
-// }
-
 
 const PreworkCalculator = StackNavigator({
     Calculator: { screen: Calculator },

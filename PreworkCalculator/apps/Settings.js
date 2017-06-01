@@ -19,7 +19,7 @@ export default class Setting extends Component {
 
 
     static navigationOptions = ({ navigation }) => ({
-        title: 'Setting',
+        headerLeft: null,
         headerRight: <Button
             title="Save"
             onPress={() => {
@@ -90,6 +90,11 @@ export default class Setting extends Component {
                         onValueChange={(scene) => this.setSelectSceneTransition(scene)}>
                         <Picker.Item label="FloatFromRight" value="FloatFromRight" />
                         <Picker.Item label="FloatFromLeft" value="FloatFromLeft" />
+                        <Picker.Item label="FloatFromBottom" value="FloatFromBottom" />
+                        <Picker.Item label="FloatFromBottomAndroid" value="FloatFromBottomAndroid" />
+                        <Picker.Item label="SwipeFromLeft" value="SwipeFromLeft" />
+                        <Picker.Item label="HorizontalSwipeJump" value="HorizontalSwipeJump" />
+                        <Picker.Item label="HorizontalSwipeJumpFromRight" value="HorizontalSwipeJumpFromRight" />
                     </Picker>
 
                 </View>

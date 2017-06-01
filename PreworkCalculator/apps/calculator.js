@@ -11,9 +11,15 @@ import SegmentedControlTab from 'react-native-segmented-control-tab';
 
 export default class Cal extends Component {
 
-    static navigationOptions = {
-        title: 'Welcome',
-    };
+    static navigationOptions = ({ navigation }) => ({
+        headerLeft: null,
+        headerRight: <Button
+            title="Setting"
+            onPress={() => {
+                 const { navigate } = navigation;
+                navigate('Setting');
+            }}/>
+    });
 
     constructor(){
         super();
@@ -63,17 +69,10 @@ export default class Cal extends Component {
 
     render() {
 
-        const { navigate } = this.props.navigation;
+
 
         return (
             <View >
-                <View>
-                    <Button
-                        tyle={{flex:1, margin:5, fontSize:20}}
-                        title="Setting"
-                        onPress={() => navigate('Setting')}
-                    />
-                </View>
 
                 <View>
                     <Text style={{alignContent: 'center', fontSize:30, fontWeight:'bold', textAlign:'center',
@@ -93,7 +92,7 @@ export default class Cal extends Component {
                 </View>
 
                 <View>
-                    <Text style = {{fontSize: 20, marginLeft: 5, marginRight:5, marginTop: 10}}>Tip amount: 0</Text>
+                    <Text style = {{fontSize: 20, marginLeft: 5, marginRight:5, marginTop: 10}}>Tip amount: {this.state.tipAmount}</Text>
                 </View>
 
                 <View style={{marginTop: 10, marginLeft:5, marginRight:5}}>
