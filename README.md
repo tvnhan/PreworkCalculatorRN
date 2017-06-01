@@ -1,3 +1,5 @@
 #GitPreworkCalculator
 
-Link demo: http://i.imgur.com/88drgYP.gif
+Link demo: http://i.imgur.com/kXQRaHK.gif
+
+[Imgur](http://i.imgur.com/kXQRaHK.gifv)
